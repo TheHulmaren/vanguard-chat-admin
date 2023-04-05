@@ -37,6 +37,7 @@ export default {
   methods: {
     async onSubmit() {
       this.isSaving = true;
+      console.log(process.env.VUE_APP_STRAPI_URL)
       try {
         await this.$axios.post(
           `${process.env.VUE_APP_STRAPI_URL}/api/corpuses/add-embedding`,
